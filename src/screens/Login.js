@@ -19,7 +19,7 @@ const Login = () => {
     navigate('/home')
   }
   return (
-    <div style={{backgroundColor:"black",height:"100vh",width:"100%",position:"relative"}}>
+    <div style={{backgroundColor:"black",height:"100vh",width:"100%",position:"relative",overflow:"hidden"}}>
         <div style={{position:"absolute",top:"5%",left:"3%"}}><TbSquareRoundedChevronLeft size="8%" style={{color:"white"}} onClick={backHandler}/></div>
         <div style={{color:"white",position:"absolute",top:"15%",left:"3%",fontSize:"20px",fontWeight:"500"}}>Login</div>
         <Box component='form' onSubmit={submitHandler}>
