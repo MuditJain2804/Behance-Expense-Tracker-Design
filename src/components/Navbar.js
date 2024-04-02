@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <div >
         <Paper sx={{position:"fixed", bottom: 0, left: 0, right: 0 }}>
-            <BottomNavigation value={activeComponent} onChange={handleChange} style={{width:"100vw",backgroundColor:"black",display:"flex",justifyContent:"space-between",}} >
+            <BottomNavigation value={activeComponent} onChange={handleChange} style={{width:"100vw",backgroundColor:"#1D1D1D",display:"flex",justifyContent:"space-between",}} >
                 <BottomNavigationAction value='Home'  style={{color:"white"}}  icon={<RiHome4Line />} />
                 <BottomNavigationAction value='Expense' style={{color:"white"}}  icon={<GrAnalytics />} />
                 <BottomNavigationAction value='Analysis' style={{color:"white"}}  icon={<VscGraph />} />

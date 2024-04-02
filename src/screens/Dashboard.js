@@ -10,13 +10,18 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import { Gauge,gaugeClasses } from '@mui/x-charts/Gauge';
 import { MdFlight } from "react-icons/md";
 import { FaBasketShopping } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
+  const navigate = useNavigate()
+  function clickhandler(){
+    navigate('/profile')
+  }
   return (
-    <div style={{position:"relative",height:"94vh",width:"100%",backgroundColor:"black",overflow:"hidden"}}>
+    <div style={{position:"relative",height:"94vh",width:"100%",backgroundColor:"#1D1D1D",overflow:"hidden"}}>
     <div><NotificationsNoneOutlinedIcon style={{position:"absolute",top:"2%",right:"3%",color:"white",marginTop:"0.3em"}}/></div>
         <div style={{display:"flex",position:"absolute",top:"2%",left:"3%",gap:"1em",width:"100%"}}>
-            <Avatar src={image}/>
+            <div onClick={clickhandler}><Avatar src={image}/></div>
             <div style={{display:"flex",flexDirection:"column"}}>
               <div style={{color:"white",fontSize:"1em",fontWeight:"500"}}>Hello Zelensky,</div>
                 <div style={{color:"silver",fontSize:"0.75em"}}>"Invest in what matters most"</div>
