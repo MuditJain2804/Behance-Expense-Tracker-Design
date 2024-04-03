@@ -6,16 +6,20 @@ import { RiHome4Line } from "react-icons/ri";
 import { GrAnalytics } from "react-icons/gr";
 import { VscGraph } from "react-icons/vsc";
 import { GrTransaction } from "react-icons/gr";
-import { AppBar, BottomNavigation, BottomNavigationAction, Box, Button, IconButton, List, ListItem, ListItemButton, Menu, MenuItem, Paper, Toolbar } from '@mui/material'
-import Dashboard from '../screens/Dashboard'
+import { BottomNavigation, BottomNavigationAction,Paper } from '@mui/material'
+import Dashboard from '../screens/Dashboard';
+import AddTransaction from '../screens/AddTransaction'
+import TransactionHistory from '../screens/TransactionHistory'
 
 const Navbar = () => {
     const [activeComponent,setActiveComponent] = useState('Home')
     const components = {
         'Home' : <Dashboard/>,
-        'Expense' : <Expense/>,
-        'Analysis' : <Analysis/>,
-        'Transaction' : <Transaction/>
+        'Expense' : <Expense setActiveComponent={setActiveComponent}/>,
+        'Analysis' : <Analysis setActiveComponent={setActiveComponent}/>,
+        'Transaction' : <Transaction setActiveComponent={setActiveComponent}/>,
+        'AddTransaction' : <AddTransaction setActiveComponent={setActiveComponent}/>,
+        'TransactionHistory' : <TransactionHistory setActiveComponent={setActiveComponent}/>
     }
     function handleChange(event,newValue){
         setActiveComponent(newValue)

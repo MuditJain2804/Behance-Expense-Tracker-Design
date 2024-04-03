@@ -6,7 +6,7 @@ import AddIcon from '@mui/icons-material/Add'
 import { ArrowDropDown } from '@mui/icons-material';
 import { BarChart } from '@mui/x-charts';
 
-const Analysis = () => {
+const Analysis = ({setActiveComponent}) => {
   const month = ['January','February','March','April','May','June','July','August','September','October','November','December']
   const [selectedMonth, setSelectedMonth] = useState('February')
   const [quater, setQuater] = useState('January-March')
@@ -15,6 +15,9 @@ const Analysis = () => {
   }
   function changeHandler(event){
     setQuater(event.target.value)
+  }
+  function backhandler(){
+    setActiveComponent('Home')
   }
   const dataset = [
     {
@@ -40,8 +43,8 @@ const Analysis = () => {
   return (
     <div style={{backgroundColor:"#1D1D1D",position:"relative",height:"94vh",width:"100%",overflow:"hidden"}}>
       <div style={{position:"absolute",top:"5%",left:"3%",width:"94%",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-        <div><TbSquareRoundedChevronLeft size="20" style={{color:"white"}}/></div>
-        <div style={{color:"white",fontSize:"20px"}}>Analysis</div>
+        <div><TbSquareRoundedChevronLeft onClick={backhandler} size="20" style={{color:"white"}}/></div>
+        <div style={{color:"white",fontSize:"20px",fontWeight:"bold"}}>Analysis</div>
         <div><NotificationsNoneOutlinedIcon style={{color:"white"}}/></div>
       </div>
       <div style={{position:"absolute",top:"12%",left:"3%",width:"94%",display:"flex",flexDirection:"column",gap:"1em"}}>
