@@ -28,7 +28,7 @@ const Expense = ({setActiveComponent}) => {
     setActiveComponent('Category')
   }
   return (
-    <div style={{backgroundColor:"#1D1D1D",position:"relative",height:"94vh",width:"100%",overflow:"hidden"}}>
+    <div style={{backgroundColor:"#1D1D1D",position:"relative",height:"96vh",width:"100vw"}}>
       <div style={{position:"absolute",top:"5%",left:"3%",width:"94%",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
         <div><TbSquareRoundedChevronLeft onClick={backhandler} size="20" style={{color:"white"}}/></div>
         <div style={{color:"white",fontSize:"20px",fontWeight:"bold"}}>Expenses</div>
@@ -37,11 +37,11 @@ const Expense = ({setActiveComponent}) => {
           <div><NotificationsNoneOutlinedIcon style={{color:"white"}}/></div>
         </div>
       </div>
-      <div style={{position:"absolute",top:"11%",left:"3%",width:"94%",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+      <div style={{position:"absolute",top:"10%",left:"3%",width:"94%",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
         <div style={{color:"white"}}>Categories</div>
         <div><Fab onClick={clickHandler} sx={{width:"30px",height:"25px",backgroundImage:"linear-gradient(to bottom, #8647FB,#B366FC)"}}><AddIcon style={{color:"white"}} /></Fab></div>
       </div>
-      <div style={{position:"absolute",top:"16%",left:"3%",width:"94%",color:"#BDEDFB"}}>
+      <div style={{position:"absolute",top:"15%",left:"3%",width:"94%",color:"#BDEDFB"}}>
         Choose category to add your expense
       </div>
       <div className='container'>

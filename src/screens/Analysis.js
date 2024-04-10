@@ -41,19 +41,19 @@ const Analysis = ({setActiveComponent}) => {
 
   };
   return (
-    <div style={{backgroundColor:"#1D1D1D",position:"relative",height:"94vh",width:"100%",overflow:"hidden"}}>
+    <div style={{backgroundColor:"#1D1D1D",position:"relative",height:"96vh",width:"100vw"}}>
       <div style={{position:"absolute",top:"5%",left:"3%",width:"94%",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
         <div><TbSquareRoundedChevronLeft onClick={backhandler} size="20" style={{color:"white"}}/></div>
         <div style={{color:"white",fontSize:"20px",fontWeight:"bold"}}>Analysis</div>
         <div><NotificationsNoneOutlinedIcon style={{color:"white"}}/></div>
       </div>
-      <div style={{position:"absolute",top:"12%",left:"3%",width:"94%",display:"flex",flexDirection:"column",gap:"1em"}}>
+      <div style={{position:"absolute",top:"12%",left:"3%",width:"94%",display:"flex",flexDirection:"column",gap:"0.2em"}}>
         <div style={{display:"flex",justifyContent:"space-between"}}>
           <div style={{color:"#BDEDFB"}}>Total Income</div>
           <div><Fab sx={{width:"30px",height:"25px",backgroundImage:"linear-gradient(to bottom, #8647FB,#B366FC)"}}><AddIcon style={{color:"white"}} /></Fab></div>
         </div>
         <div>
-          <FormControl size='small' sx={{width:"40%"}}>
+          <FormControl size='small' sx={{width:"50%"}}>
             <Select sx={{border:"1px solid #B366FC",color:"white"}} onChange={handleChange} value={selectedMonth} IconComponent={() => <ArrowDropDown sx={{color:"#B366FC"}}/>}>
               {month.map((text,index) => 
               <MenuItem  value={text} >{text}</MenuItem>
@@ -64,13 +64,13 @@ const Analysis = ({setActiveComponent}) => {
         <div style={{color:"white"}}>$ 5,000</div>
         <div style={{height:"1px",backgroundColor:"#434343"}}></div>
       </div>
-      <div style={{position:"absolute",top:"40%",left:"3%",width:"94%",display:"flex",flexDirection:"column",gap:"1em"}}>
+      <div style={{position:"absolute",top:"35%",left:"3%",width:"94%",display:"flex",flexDirection:"column",gap:"0.1em"}}>
         <div style={{display:"flex",justifyContent:"space-between"}}>
           <div style={{color:"#BDEDFB"}}>Average Expense</div>
           <div><Fab sx={{width:"30px",height:"25px",backgroundImage:"linear-gradient(to bottom, #8647FB,#B366FC)"}}><AddIcon style={{color:"white"}} /></Fab></div>
         </div>
         <div>
-          <FormControl size='small' sx={{width:"40%"}}>
+          <FormControl size='small' sx={{width:"50%"}}>
             <Select sx={{border:"1px solid #B366FC",color:"white"}} onChange={handleChange} value={selectedMonth} IconComponent={() => <ArrowDropDown sx={{color:"#B366FC"}}/>}>
               {month.map((text,index) => 
               <MenuItem  value={text} >{text}</MenuItem>
@@ -81,7 +81,7 @@ const Analysis = ({setActiveComponent}) => {
         <div style={{color:"white"}}>$ 3,000</div>
         <div style={{height:"1px",backgroundColor:"#434343"}}></div>
       </div>
-      <div style={{position:"absolute",top:"65%",left:"3%",width:"94%",display:"flex",flexDirection:"column"}}>
+      <div style={{position:"absolute",top:"58%",left:"3%",width:"94%",display:"flex",flexDirection:"column"}}>
         <div style={{display:"flex",justifyContent:"space-between"}}>
           <div style={{color:"#BDEDFB"}}>Spending limit</div>
           <div>

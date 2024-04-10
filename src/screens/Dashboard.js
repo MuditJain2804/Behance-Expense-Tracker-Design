@@ -11,6 +11,7 @@ import { Gauge,gaugeClasses } from '@mui/x-charts/Gauge';
 import { MdFlight } from "react-icons/md";
 import { FaBasketShopping } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const Dashboard = () => {
   const navigate = useNavigate()
@@ -18,7 +19,7 @@ const Dashboard = () => {
     navigate('/profile')
   }
   return (
-    <div style={{position:"relative",height:"94vh",width:"100%",backgroundColor:"#1D1D1D",overflow:"hidden"}}>
+    <div style={{position:"relative",height:"96vh",width:"100vw",backgroundColor:"#1D1D1D"}}>
     <div><NotificationsNoneOutlinedIcon style={{position:"absolute",top:"2%",right:"3%",color:"white",marginTop:"0.3em"}}/></div>
         <div style={{display:"flex",position:"absolute",top:"2%",left:"3%",gap:"1em",width:"100%"}}>
             <div onClick={clickhandler}><Avatar src={image}/></div>
@@ -47,7 +48,10 @@ const Dashboard = () => {
                 <div style={{fontSize:"14px"}}>Expiry Date</div>
                 <div style={{fontSize:"14px"}}>10/28</div>
               </div>
-              <div><RiMastercardLine/></div>
+              <div className="card-logo">
+                <div className="logo-shape1"></div>
+                <div className="logo-shape2"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -86,7 +90,7 @@ const Dashboard = () => {
               <div style={{color:"#B366FC",fontSize:"10px"}}>View all</div>
             </div>
             <div style={{display:"flex",justifyContent:"space-between"}}>
-              <div style={{display:"flex",backgroundColor:"#8647FB",padding:"10px"}}>
+              <div style={{display:"flex",backgroundColor:"#8647FB",padding:"10px",width:"42%",justifyContent:"space-between"}}>
                 <div style={{display:"flex",flexDirection:"column",justifyContent:"space-between"}}>
                   <div style={{color:"white"}}><MdFlight/>Travel</div>
                   <div style={{display:"flex",flexDirection:"column"}}>
@@ -94,9 +98,9 @@ const Dashboard = () => {
                     <div style={{color:"white",fontSize:"10px"}}>Bus fare</div>
                   </div>
                 </div>
-                <div><Gauge  sx={{[`& .${gaugeClasses.valueArc}`]: {fill: 'white'}}} height={60} width={60} value={28}/></div>
+                <div><Gauge  sx={{[`& .${gaugeClasses.valueArc}`]: {fill: 'white'}}} height={60} width={55} value={28}/></div>
               </div>
-              <div style={{display:"flex",backgroundColor:"#EA5FFF",padding:"10px"}}>
+              <div style={{display:"flex",backgroundColor:"#EA5FFF",padding:"10px",width:"42%",justifyContent:"space-between"}}>
                 <div style={{display:"flex",flexDirection:"column",justifyContent:"space-between"}}>
                   <div style={{color:"white"}}><FaBasketShopping/>Grocery</div>
                   <div style={{display:"flex",flexDirection:"column"}}>
@@ -104,11 +108,12 @@ const Dashboard = () => {
                     <div style={{color:"white",fontSize:"10px"}}>Fruits</div>
                   </div>
                 </div>
-                <Gauge  sx={{[`& .${gaugeClasses.valueArc}`]: {fill: 'black'}}} height={60} width={60} value={40}/>
+                <div><Gauge  sx={{[`& .${gaugeClasses.valueArc}`]: {fill: 'black'}}} height={60} width={55} value={40}/></div>
               </div>
             </div>
           </div>
         </div>
+
     </div>
   )
 }

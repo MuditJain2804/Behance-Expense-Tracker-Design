@@ -24,19 +24,19 @@ const Category = ({setActiveComponent}) => {
     setSelectedValue(newValue)
   }
   return (
-    <div style={{backgroundColor:"#1D1D1D",position:"relative",height:"94vh",width:"100%",overflow:"hidden"}}>
+    <div style={{backgroundColor:"#1D1D1D",position:"relative",height:"96vh",width:"100vw"}}>
       <div style={{position:"absolute",top:"5%",left:"3%",width:"94%",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
         <div><TbSquareRoundedChevronLeft onClick={backhandler} size="20" style={{color:"white"}}/></div>
         <div style={{color:"white",fontSize:"20px",fontWeight:"bold"}}>Category</div>
         <div><NotificationsNoneOutlinedIcon style={{color:"white"}}/></div>
       </div>
-      <ToggleButtonGroup size='small' onChange={handleChange} exclusive value={selectedValue} style={{position:"absolute",top:"10%",left:"3%",display:"flex",alignItems:"center",justifyContent:"center",width:"94%"}} >
+      <ToggleButtonGroup size='small' onChange={handleChange} exclusive value={selectedValue} style={{position:"absolute",top:"9%",left:"3%",display:"flex",alignItems:"center",justifyContent:"center",width:"94%"}} >
         <ToggleButton size='small' style={{color:"white", borderBottom: selectedValue === "Expense" ? '4px solid #B366FC' : 'none'}} value='Expense'>Expense</ToggleButton>
         <ToggleButton size='small' style={{color:"white", borderBottom: selectedValue === "Income" ? '4px solid #B366FC' : 'none'}} value='Income'>Income</ToggleButton>
       </ToggleButtonGroup>
         {
           selectedValue === 'Expense' &&
-          <div style={{position:"absolute",top:"20%",left:"3%",width:"94%",display:"flex",flexDirection:"column",gap:"15px"}}>
+          <div style={{position:"absolute",top:"18%",left:"3%",width:"94%",display:"flex",flexDirection:"column",gap:"7px"}}>
             <div style={{display:"flex",gap:"10px",alignItems:"center"}}>
               <div style={{backgroundColor:"#614848",height:"2.5em",width:"2.5em",borderRadius:"5px",display:"flex",justifyContent:"center",alignItems:"center"}}><PiCar color='white'/></div>
               <div style={{color:"white"}}>Transport</div>

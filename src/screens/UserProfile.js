@@ -27,7 +27,7 @@ const UserProfile = () => {
         'Sign out':<PiSignOut/>
     }
   return (
-    <div style={{backgroundColor:"black",position:"relative",height:"100vh",width:"100%"}}>
+    <div style={{backgroundColor:"black",position:"relative",height:"100vh",width:"100vw"}}>
         <div style={{position:"absolute",top:"5%",left:"3%"}}><TbSquareRoundedChevronLeft size="8%" style={{color:"white"}} onClick={backHandler}/></div>
         <div style={{position:"absolute",top:"10%",display:"flex",flexDirection:"column",width:"100%"}}>
             <div style={{display:"flex",justifyContent:"center"}}><Avatar src={image} /></div>

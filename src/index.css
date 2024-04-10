@@ -17,10 +17,9 @@ code {
   flex-wrap: wrap;
   justify-content: space-between;
   position: absolute;
-  top: 23%;
+  top: 21%;
   left: 4%;
   width: 92%;
-  gap: 10px;
 }
 
 .item {
@@ -30,7 +29,6 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -44,7 +42,7 @@ code {
 }
 
 .day {
-  padding: 8px;
+  padding: 5px;
   text-align: center;
   border: 1px solid white;
 }
@@ -54,3 +52,20 @@ code {
   text-align: center;
 }
 
+.card-logo {
+  display: flex;
+}
+.logo-shape1, .logo-shape2 {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.logo-shape1 {
+  background-color: #E33A24;
+  margin-right: -15px;
+  
+}
+.logo-shape2 {
+  background-color: #D7C846;
+  z-index: 0;
+}

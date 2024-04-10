@@ -14,7 +14,7 @@ const TransactionHistory = ({setActiveComponent}) => {
     setActiveComponent('Transaction')
   }
   return (
-    <div style={{backgroundColor:"#1D1D1D",position:"relative",height:"94vh",width:"100%",overflow:"hidden"}}>
+    <div style={{backgroundColor:"#1D1D1D",position:"relative",height:"96vh",width:"100vw"}}>
       <div style={{position:"absolute",top:"5%",left:"3%",width:"94%",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
         <div><TbSquareRoundedChevronLeft onClick={backhandler} size="20" style={{color:"white"}}/></div>
         <div style={{color:"white",fontSize:"20px",fontWeight:"bold"}}>Transaction History</div>
